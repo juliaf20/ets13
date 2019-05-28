@@ -1,8 +1,12 @@
 
 package newjavagit;
-// Vamos a ver 
-public class Newjavagit {
+/**
+ * comentarion nuevo
+ * @author jcc
+ */
 
+
+public class Newjavagit {
     /**
      * @param args the command line arguments
      */
