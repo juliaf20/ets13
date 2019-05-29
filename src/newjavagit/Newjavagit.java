@@ -25,7 +25,7 @@ public class Newjavagit {
                 if (f == 1 || c == 1 || f == matriz.length - 1 || c == matriz[f].length - 1) {
                     System.out.print("1");
                 } else {
-                    System.out.print("0");
+                    System.out.print("2");
                 }
             }
             System.out.println("");
