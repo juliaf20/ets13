@@ -1,25 +1,28 @@
 package newjavagit;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Newjavagit {
 
-    public static void main(String[] args) {
-        Newjavagit njg;
-        njg = new Newjavagit();
-        njg.crearMariz3x3();
-        njg.crearMariz4x4();
-        njg.crearMariz5x5();
-        //teclado = new Scanner(System.in);
+   public static void main(String[] args) {
+        int opcion = 0; String op = "";
+        op = JOptionPane.showInputDialog("Eliga una opción: \n"
+                +"1 para Matriz 3x3\n" 
+                +"2 para Matriz 4x4\n" 
+                +"3 para Matriz 5x5\n");
+
+        opcion = Integer.parseInt(op);
+        switch (opcion) {
+            case 1:Matriz3x3();break;
+            case 2:Matriz4x4();break;
+            case 3:Matriz5x5();break;
+            default:JOptionPane.showMessageDialog(null, "Elige una opción valida");
+        }
     }
-
-    //Scanner teclado;
-    int[][] matriz;
-
-    public void crearMariz3x3(/*int x, int y*/) {
-        System.out.println("Matriz de 3");
-        matriz = new int[4][4];
-        //teclado = new Scanner(System.in);
+    private static void Matriz3x3(){
+        double[][]matriz;
+        JOptionPane.showMessageDialog(null,"Matriz de 3x3");
+        matriz = new double[4][4];
         for (int f = 1; f < matriz.length; f++) {
             for (int c = 1; c < matriz[f].length; c++) {
                 if (f == 1 || c == 1 || f == matriz.length - 1 || c == matriz[f].length - 1) {
@@ -30,48 +33,35 @@ public class Newjavagit {
             }
             System.out.println("");
         }
-    }/*
-        for (int f = 1; f <= x; f++) {
-            for (int c = 1; c <= y; c++) {
-                if (f == 1 || c == 1 || f == x || c == y) {
-                    System.out.print("1");
-                } else {
-                    System.out.print("0");
-                }
-            }
-            System.out.println("");
-        }
-    }*/
-
-    public void crearMariz4x4() {
-        System.out.println("Matriz de 4");
-        matriz = new int[5][5];
-        //teclado = new Scanner(System.in);
+    }
+    private static void Matriz4x4(){
+        double[][]matriz;
+        JOptionPane.showMessageDialog(null,"Matriz de 4x4");
+        matriz = new double[5][5];
         for (int f = 1; f < matriz.length; f++) {
             for (int c = 1; c < matriz[f].length; c++) {
                 if (f == 1 || c == 1 || f == matriz.length - 1 || c == matriz[f].length - 1) {
                     System.out.print("1");
                 } else {
-                    System.out.print("0");
+                    System.out.print("2");
                 }
             }
             System.out.println("");
         }
     }
-    
-     public void crearMariz5x5() {
-        System.out.println("Matriz de 5");
-        matriz = new int[6][6];
+    private static void Matriz5x5(){
+        double[][]matriz;
+        JOptionPane.showMessageDialog(null,"Matriz de 5x5");
+        matriz = new double[5][5];
         for (int f = 1; f < matriz.length; f++) {
             for (int c = 1; c < matriz[f].length; c++) {
                 if (f == 1 || c == 1 || f == matriz.length - 1 || c == matriz[f].length - 1) {
                     System.out.print("1");
                 } else {
-                    System.out.print("0");
+                    System.out.print("2");
                 }
             }
             System.out.println("");
         }
     }
-
 }
